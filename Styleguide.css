@@ -1,0 +1,12 @@
+:root {
+    --bg-color: #FFFFF0;
+}
+
+div {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.title {
+    background-color: #9370DB;
+}
