@@ -1,5 +1,5 @@
-:root {
-    --bg-color: #FFFFF0;
+body {
+    background-color: #FFFFF0;
 }
 
 div {
@@ -8,5 +8,6 @@ div {
 }
 
 .title {
+    padding: 10px;
     background-color: #9370DB;
 }
