@@ -17,9 +17,9 @@ body {
 	font: 75% georgia, sans-serif;
 	line-height: 1.88889;
 	color: #555753;
-	background: #fff url(https://www.photocase.com/photos/2101646-white-flower-frame-on-blue-background-lifestyle-photocase-stock-photo-large.jpeg) no-repeat bottom right;
-	margin: 0;
-	padding: 0;
+	background-image: linear-gradient(AliceBlue, PowderBlue);
+	margin: 20;
+	padding: 20;
 	}
 p {
 	margin-top: 0;
