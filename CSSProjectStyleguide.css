@@ -29,21 +29,21 @@ h3 {
 	font: italic normal 1.4em georgia, sans-serif;
 	letter-spacing: 1px;
 	margin-bottom: 0;
-	color: #7D775C;
+	color: #191970;
 	}
 a:link {
 	font-weight: bold;
 	text-decoration: none;
-	color: #B7A5DF;
+	color: #20B2AA;
 	}
 a:visited {
 	font-weight: bold;
 	text-decoration: none;
-	color: #D4CDDC;
+	color: #FFB6C1;
 	}
 a:hover, a:focus, a:active {
 	text-decoration: underline;
-	color: #9685BA;
+	color: #008B8B;
 	}
 abbr {
 	border-bottom: none;
@@ -177,10 +177,10 @@ footer a:link, footer a:visited {
 	list-style-type: none;
 	}
 .sidebar li a:link {
-	color: #988F5E;
+	color: #B7A5DF;
 	}
 .sidebar li a:visited {
-	color: #B3AE94;
+	color: #D4CDDC;
 	}
 
 
