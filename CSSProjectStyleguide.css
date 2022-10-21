@@ -39,7 +39,7 @@ a:link {
 a:visited {
 	font-weight: bold;
 	text-decoration: none;
-	color: #FFB6C1;
+	color: #DB7093;
 	}
 a:hover, a:focus, a:active {
 	text-decoration: underline;
@@ -177,10 +177,10 @@ footer a:link, footer a:visited {
 	list-style-type: none;
 	}
 .sidebar li a:link {
-	color: #B7A5DF;
+	color: #FFB6C1;
 	}
 .sidebar li a:visited {
-	color: #D4CDDC;
+	color: #DB7093;
 	}
 
 
