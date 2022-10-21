@@ -14,7 +14,7 @@ html {
 	padding: 0;
 	}
 body {
-	font: 75% georgia, sans-serif;
+	font: 75% verdana, sans-serif;
 	line-height: 1.88889;
 	color: #555753;
 	background-image: linear-gradient(AliceBlue, PowderBlue);
@@ -97,6 +97,7 @@ header {
 	margin: 20px 20px 20px 10px;
 	width: 160px;
 	float: left;
+	background: #F0FFF0;
 	}
 .summary p {
 	font: italic 1.1em/2.2 georgia;
@@ -108,7 +109,7 @@ header {
 	padding: 0px 10px 0 10px;
 	}
 .supporting {
-	padding-left: 10px;
+	padding-left: 50px;
 	margin-bottom: 40px;
 	}
 
@@ -124,6 +125,7 @@ footer a:link, footer a:visited {
 	position: absolute;
 	top: 0;
 	right: 0;
+	background: #F0FFF0;
 	}
 .sidebar .wrapper {
 	font: 10px verdana, sans-serif;
