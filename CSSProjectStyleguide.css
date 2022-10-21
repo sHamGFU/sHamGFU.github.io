@@ -106,16 +106,18 @@ header {
 	}
 
 .preamble {
-	clear: right;
-	padding: 30px 10px 30 10px;
-	margin-left: 170px;
+	padding-right: 30px;
+	padding-left: 30px;
+	margin-bottom: 5px;
+	margin-left: 200px;
 	border: 5px double DarkSlateGrey;
 	}
 .supporting {
 	padding-left: 30px;
 	padding-right: 30px;
+	margin-top: 5px;
 	margin-bottom: 40px;
-	margin-left: 170px;
+	margin-left: 200px;
 	border: 5px double DarkSlateGrey;
 	}
 
