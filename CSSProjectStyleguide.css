@@ -26,7 +26,7 @@ p {
 	text-align: justify;
 	}
 h3 {
-	font: italic normal 1.4em georgia, sans-serif;
+	font: italic normal 1.4em verdana, sans-serif;
 	letter-spacing: 1px;
 	margin-bottom: 0;
 	color: #2F4F4F;
@@ -94,7 +94,7 @@ header {
 
 .summary {
 	clear: both;
-	margin: 20px 20px 20px 10px;
+	margin: 20px 20px 200px 10px;
 	width: 160px;
 	float: left;
 	background: #F0FFF0;
@@ -109,8 +109,9 @@ header {
 	padding: 0px 10px 0 10px;
 	}
 .supporting {
-	padding-left: 50px;
+	padding-left: 100px;
 	margin-bottom: 40px;
+	border: 5px double DarkSlateGrey;
 	}
 
 footer {
