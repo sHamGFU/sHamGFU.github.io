@@ -18,18 +18,23 @@
 
         // Create the data table.
         var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
+        data.addColumn('string', 'Languages');
+        data.addColumn('number', 'Speakers');
         data.addRows([
-          ['Mushrooms', 3],
-          ['Onions', 1],
-          ['Olives', 1],
-          ['Zucchini', 1],
-          ['Pepperoni', 2]
+          ['English', 1121],
+          ['Mandarin', 1107],
+          ['Hindi', 698],
+          ['Spanish', 512],
+          ['French', 284],
+          ['Arabic', 273],
+          ['Bengali', 265],
+          ['Russian', 258],
+          ['Portuguese', 234],
+          ['Indonesian', 200]
         ]);
 
         // Set chart options
-        var options = {'title':'How Much Pizza I Ate Last Night',
+        var options = {'title':'Most Spoken Languages in 2022',
                        'width':400,
                        'height':300};
 
