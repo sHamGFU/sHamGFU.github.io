@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+    google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+    var options = {
+       'title':'Most Spoken Languages in 2022 (numbers in Millions)',
+       'width':1200,
+       'height':800,
+       'animation': {
+          'duration': 1000,
+          'easing': 'in'
+       },
+       hAxis: {
+          'viewWindow': {
+             'min': 0,
+             'max': 5}
+       },
+    };
+
+    var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+
+    var data = new google.visualization.DataTable();
+       data.addColumn('string', 'Languages');
+       data.addColumn('number', 'Speakers');
+       data.addRows([
+          ['English', 1121],
+          ['Mandarin', 1107],
+          ['Hindi', 698],
+          ['Spanish', 512],
+          ['French', 284],
+          ['Arabic', 273],
+          ['Bengali', 265],
+          ['Russian', 258],
+          ['Portuguese', 234],
+          ['Indonesian', 200],
+          ['Urdu', 170],
+          ['Japanese', 150],
+          ['German', 135],
+          ['Punjabi', 100],
+          ['Javanese', 84],
+          ['Wu Chinese', 80],
+          ['Telugu', 79],
+          ['Turkish', 78],
+          ['Korean', 77],
+          ['Marathi', 74]
+       ]);
+
+       var prevButton = document.getElementById('b1');
+       var nextButton = document.getElementById('b2');
+       var changedZoomButton = document.getElementById('b3');
+
+       function drawChart() {
+          prevButton.disabled = true;
+          nextButton.disabled = true;
+          changedZoomButton.disabled = true;
+
+          google.visualization.events.addListener(chart, 'ready', function() {
+             prevButton.disabled = options.hAxis.viewWindow.min <= 0;
+             nextButton.disabled = options.hAxis.viewWindow.max >= MAX;
+             changedZoomButton.disabled = false;
+          });
+
+         chart.draw(data, options);
+       }
+
+    prevButton.onclick = function() {
+       options.hAxis.viewWindow.min -= 1;
+       options.hAxis.viewWindow.max -= 1;
+       drawChart();
+    }
+
+    nextButton.onclick = function() {
+       options.hAxis.viewWindow.min += 1;
+       options.hAxis.viewWindow.max += 1;
+       drawChart();
+    }
+
+    var zoomed = false;
+    changedZoomButton.onclick = function() {
+       if (zoomed) {
+          options.hAxis.viewWindow.min = 0;
+          options.hAxis.viewWindow.max = 5;
+       }
+       else {
+          options.hAxis.viewWindow.min = 0;
+          options.hAxis.viewWindow.max = MAX;
+       }
+
+       zoomed = !zoomed;
+       drawChart();
+    }
+
+    drawChart();
+
+    </script>
+</head>
+
+<body>
+<!--Div that will hold the pie chart-->
+<div id="chart_div"></div>
+</body>
+
+
+
+
+</html>
