@@ -1,78 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>JS Project</title>
+<head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
 
-        <!--Load the AJAX API-->
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script type="text/javascript">
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
 
-          // Load the Visualization API and the corechart package.
-          google.charts.load('current', {'packages':['corechart', 'bar']});
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
 
-          // Set a callback to run when the Google Visualization API is loaded.
-          google.charts.setOnLoadCallback(drawChart);
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
 
-          // Callback that creates and populates a data table,
-          // instantiates the pie chart, passes in the data and
-          // draws it.
-          function drawChart() {
-            // Create the data table.
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Mushrooms', 3],
+          ['Onions', 1],
+          ['Olives', 1],
+          ['Zucchini', 1],
+          ['Pepperoni', 2]
+        ]);
 
-            var data = new google.visualization.DataTable();
-            data.addColumn('language', 'Language');
-            data.addColumn('number', 'Number of Speakers (in Millions)');
+        // Set chart options
+        var options = {'title':'How Much Pizza I Ate Last Night',
+                       'width':400,
+                       'height':300};
 
-            data.addRows([
-            [{v: [1, 0, 0], f: 'English'}, 1],
-            [{v: [2, 0, 0], f: 'Mandarin'}, 2],
-            [{v: [3, 0, 0], f: 'Hindi'}, 3],
-            [{v: [4, 0, 0], f: 'Spanish'}, 4],
-            [{v: [5, 0, 0], f: 'French'}, 5],
-            [{v: [6, 0, 0], f: 'Arabic'}, 6],
-            [{v: [7, 0, 0], f: 'Bengali'}, 7],
-            [{v: [8, 0, 0], f: 'Russian'}, 8],
-            [{v: [9, 0, 0], f: 'Portuguese'}, 9],
-            [{v: [10, 0, 0], f: 'Indonesian'}, 10],
-            [{v: [11, 0, 0], f: 'Urdu'}, 11],
-            [{v: [12, 0, 0], f: 'Japanese'}, 12],
-            [{v: [13, 0, 0], f: 'German'}, 13],
-            [{v: [14, 0, 0], f: 'Punjabi'}, 14],
-            [{v: [15, 0, 0], f: 'Javanese'}, 15],
-            [{v: [16, 0, 0], f: 'Wu Chinese'}, 16],
-            [{v: [17, 0, 0], f: 'Telugu'}, 17],
-            [{v: [18, 0, 0], f: 'Turkish'}, 18],
-            [{v: [19, 0, 0], f: 'Korean'}, 19],
-            [{v: [20, 0, 0], f: 'Marathi'}, 20]
-            ]);
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+</head>
 
-            // Set chart options
-            var options = {
-               title:'Most Spoken Languages in 2020',
-               hAxis: {
-                  title: 'Languages',
-                  format: 'h:mm a',
-                  viewWindow: {
-                     min: [0, 30, 0],
-                     max: [20, 30, 0]
-                  }
-               },
-               vAxis: {
-                  title: 'Number of Speakers (in Millions)'
-               }
-            };
+<body>
+<!--Div that will hold the pie chart-->
+<div id="chart_div"></div>
+</body>
 
-            // Instantiate and draw our chart, passing in some options.
-            var chart = new google.visualization.columnchart(document.getElementById('chart_div'));
-            chart.draw(data, options);
-          }
-        </script>
-    </head>
 
-    <body>
-        <!--Div that will hold the pie chart-->
-        <div id="chart_div"></div>
-    </body>
+
 
 </html>
