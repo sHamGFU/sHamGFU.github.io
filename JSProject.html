@@ -46,11 +46,14 @@
         // Set chart options
         var options = {'title':'Most Spoken Languages in 2022 (numbers in Millions)',
                        'width':1200,
-                       'height':800};
+                       'height':800,
+                       'animation': {"startup": true}
+                       };
 
         // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
         chart.draw(data, options);
+
       }
     </script>
 </head>
