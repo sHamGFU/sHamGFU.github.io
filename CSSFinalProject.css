@@ -8,5 +8,14 @@ body {
 .header {
     background-image: url("https://www.science.org/cms/10.1126/science.aas9893/asset/b3064092-042e-405f-a8c7-1098268b11dc/assets/graphic/359_1110_f1.jpeg");
     padding-top: 30px;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
+    padding-left: 30px;
+    }
+
+.p1 {
+    align:"left";
+    }
+
+.p2 {
+    align:"right";
     }
